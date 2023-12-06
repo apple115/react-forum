@@ -1,0 +1,9 @@
+/* LoginForm.css */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin-top: 20px;
+}
+
+/* Add any specific styles for LoginForm here */

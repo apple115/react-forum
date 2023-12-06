@@ -1,0 +1,9 @@
+/* PostItem.css */
+.post-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+
+/* Add any specific styles for PostItem here */

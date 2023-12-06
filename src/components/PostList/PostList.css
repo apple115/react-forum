@@ -1,0 +1,7 @@
+/* PostList.css */
+.post-list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Add any specific styles for PostList here */
