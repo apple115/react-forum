@@ -1,6 +1,7 @@
 // PostList.js
 import React from "react";
 import PostItem from "./PostItem";
+import "./PostList.css";
 
 function PostList({ posts }) {
   return (

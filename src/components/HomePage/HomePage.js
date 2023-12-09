@@ -1,6 +1,11 @@
 // HomePage.js
 import React from "react";
 import PostList from "../PostList";
+import { Link, useNavigate } from "react-router-dom";
+import "./HomePage.css";
+import My_Menu from "../Menu";
+
+//const { SubMenu } = Menu;
 
 function HomePage() {
   // Mock data for demonstration
@@ -16,13 +21,18 @@ function HomePage() {
     // Add more posts as needed
   ];
 
+  const navigate = useNavigate();
+
   return (
     <div className="home-page">
-      <h2>Hot Posts</h2>
-      <PostList posts={hotPosts} />
+      <My_Menu Page="HomePage" />
+      <div className="post-list-container">
+        <h2>Hot Posts</h2>
+        <PostList posts={hotPosts} />
 
-      <h2>Latest Posts</h2>
-      <PostList posts={latestPosts} />
+        <h2>Latest Posts</h2>
+        <PostList posts={latestPosts} />
+      </div>
     </div>
   );
 }

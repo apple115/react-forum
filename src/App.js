@@ -7,6 +7,7 @@ import PostDetail from "./components/PostDetail";
 import LoginPage from "./components/LoginPage";
 import RegisterPage from "./components/RegisterPage";
 import AdminPage from "./components/AdminPage";
+import PublishPage from "./components/PublishPage";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/admin" element={<AdminPage />} />
+          <Route path="/push" element={<PublishPage />} />
         </Routes>
       </div>
     </Router>

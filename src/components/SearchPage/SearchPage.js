@@ -1,6 +1,10 @@
 // SearchPage.js
 import React, { useState } from "react";
 import PostList from "../PostList";
+import "./SearchPage.css";
+import { Menu, Input, Button } from "antd";
+import My_Menu from "../Menu";
+const { Search } = Input;
 
 function SearchPage() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -30,15 +34,16 @@ function SearchPage() {
 
   return (
     <div className="search-page">
+      <My_Menu Page="SearchPage" />
       <h2>Search</h2>
       <div>
-        <input
-          type="text"
+        <Search
+          placeholder="Enter search term..."
+          enterButton={<Button onClick={handleSearch}>Search</Button>}
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          placeholder="Enter search term..."
+          onSearch={handleSearch}
         />
-        <button onClick={handleSearch}>Search</button>
       </div>
 
       {searchResults.length > 0 ? (

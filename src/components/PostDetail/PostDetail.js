@@ -1,6 +1,7 @@
 // PostDetail.js
 import React from "react";
 import ReplyForm from "./ReplyForm";
+import "./PostDetail.css";
 
 function PostDetail({ post }) {
   const { title, author, timestamp, content } = post;
