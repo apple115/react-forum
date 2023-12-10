@@ -9,13 +9,9 @@ import My_Menu from "../Menu";
 
 function HomePage() {
   // Mock data for demonstration
-  const hotPosts = [
+  const Posts = [
     { id: 1, title: "Hot Post 1", author: "User1", timestamp: "2023-01-01" },
     { id: 2, title: "Hot Post 2", author: "User2", timestamp: "2023-01-02" },
-    // Add more posts as needed
-  ];
-
-  const latestPosts = [
     { id: 3, title: "Latest Post 1", author: "User3", timestamp: "2023-01-03" },
     { id: 4, title: "Latest Post 2", author: "User4", timestamp: "2023-01-04" },
     // Add more posts as needed
@@ -27,11 +23,8 @@ function HomePage() {
     <div className="home-page">
       <My_Menu Page="HomePage" />
       <div className="post-list-container">
-        <h2>Hot Posts</h2>
-        <PostList posts={hotPosts} />
-
-        <h2>Latest Posts</h2>
-        <PostList posts={latestPosts} />
+        <h2>Posts</h2>
+        <PostList posts={Posts} />
       </div>
     </div>
   );
