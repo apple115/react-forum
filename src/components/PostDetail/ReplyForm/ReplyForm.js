@@ -1,26 +1,28 @@
 import React, { useState } from "react";
+import { Input, Button, Space } from 'antd';
 import "./ReplyForm.css";
 
 function ReplyForm() {
-  const [replyContent, setReplyContent] = useState("");
+ const [replyContent, setReplyContent] = useState("");
 
-  const handleReplySubmit = () => {
-    // Handle the submission of the reply content
-    console.log("Submitting reply:", replyContent);
-    // Clear the reply content after submission
-    setReplyContent("");
-  };
+ const handleReplySubmit = () => {
+  console.log("Submitting reply:", replyContent);
+  setReplyContent("");
+ };
 
-  return (
-    <div className="reply-form">
-      <textarea
-        value={replyContent}
-        onChange={(e) => setReplyContent(e.target.value)}
-        placeholder="Type your reply here..."
-      />
-      <button onClick={handleReplySubmit}>Submit Reply</button>
-    </div>
-  );
+ return (
+  <div className="reply-form">
+    <Input.TextArea
+      value={replyContent}
+      onChange={(e) => setReplyContent(e.target.value)}
+      placeholder="Type your reply here..."
+    />
+    <Space direction="horizontal" style={{width: '100%', justifyContent: 'center'}}>
+      <Button onClick={handleReplySubmit}>Submit Reply</Button>
+    </Space>
+  </div>
+ );
 }
 
 export default ReplyForm;
+

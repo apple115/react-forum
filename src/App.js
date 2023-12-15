@@ -33,7 +33,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/search" element={<SearchPage />} />
-            <Route path="/post/:postId" element={<PostDetail />} />
+            <Route path="/post/:id" element={<PostDetail />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
             {isAuthenticated && <Route path="/admin" element={<AdminPage />} />}

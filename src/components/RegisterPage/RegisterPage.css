@@ -4,6 +4,9 @@
   border: 1px solid #ddd;
   background-color: #fff;
   margin-bottom: 20px;
+  max-width: 800px; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the component on the page */
+  padding: 20px;
 }
 
 /* Add any specific styles for RegisterPage here */

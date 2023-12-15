@@ -1,0 +1,8 @@
+[project-run]
+command=npm start
+# <root> 是 $(VIM_ROOT) 的别名，写起来容易些
+cwd=<root>
+output=terminal
+pos=coderunner
+
+

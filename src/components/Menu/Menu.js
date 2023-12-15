@@ -1,8 +1,7 @@
 import React, { useContext } from "react";
-import { Form, Input, Button, Select, Menu } from "antd";
+import { Menu } from "antd";
 import {
   HomeOutlined,
-  FireOutlined,
   ClockCircleOutlined,
   UserOutlined,
 } from "@ant-design/icons";
@@ -10,7 +9,7 @@ import { Link } from "react-router-dom";
 import AuthContext from "../../AuthContext";
 
 function My_Menu({ Page }) {
-  const { isAuthenticated, user, isAdmin } = useContext(AuthContext);
+  const { isAuthenticated, isAdmin } = useContext(AuthContext);
   const menuItems = [
     {
       key: "HomePage",
@@ -24,26 +23,27 @@ function My_Menu({ Page }) {
       icon: <ClockCircleOutlined />,
       title: "SearchPage",
     },
+    {
+      key: "RegisterPage",
+      path: "/register",
+      icon: <ClockCircleOutlined />,
+      title: "RegisterPage",
+    },
   ];
 
   if (!isAuthenticated) {
-    menuItems.push({
-      key: "PublishPage",
-      path: "/push",
-      icon: <ClockCircleOutlined />,
-      title: "PublishPage",
-    });
     menuItems.push({
       key: "LoginPage",
       path: "/login",
       icon: <ClockCircleOutlined />,
       title: "LoginPage",
     });
+  } else {
     menuItems.push({
-      key: "RegisterPage",
-      path: "/register",
+      key: "PublishPage",
+      path: "/push",
       icon: <ClockCircleOutlined />,
-      title: "RegisterPage",
+      title: "PublishPage",
     });
   }
 
